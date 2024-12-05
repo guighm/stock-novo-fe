@@ -1,0 +1,58 @@
+<form [formGroup]="formProduto" (ngSubmit)="cadastrar()">
+    <div class="campo">
+        <label for="nome">Nome do produto: </label>
+        <input type="text" id="nome" placeholder="Digite o nome do produto" formControlName="nome">
+    </div>
+    <div class="campo">
+        <label for="peso">Peso (em kg): </label>
+        <input type="text" id="peso" placeholder="Peso" formControlName="peso">
+    </div>
+    <div class="campo">
+        <label for="comprimento">Comprimento (em m): </label>
+        <input type="text" id="comprimento" placeholder="Comprimento" formControlName="comprimento">
+    </div>
+    <div class="campo">
+        <label for="altura">Altura (em m): </label>
+        <input type="text" id="altura" placeholder="Altura" formControlName="altura">
+    </div>
+    <div class="campo">
+        <label for="descricao">Digite a descrição do produto: </label>
+        <input type="text" id="descricao" placeholder="Apresentação do produto" formControlName="descricao">
+    </div>
+    <!--<div class="campo">
+        <label [for]="id"><ng-content></ng-content></label>
+        <input type="text" [id]="id" [placeholder]="placeholder" [formControlName]="formControl">
+    </div> -->  
+    <div class="campo">
+        <label for="getin">GETIN: </label>
+        <input type="text" id="getin" placeholder="Digite o GETIN do produto" formControlName="getin">
+    </div>
+    <div class="campo">
+        <label for="ncm">NCM: </label>
+        <input type="text" id="ncm" placeholder="Digite o NCM do produto" formControlName="ncm">
+    </div>
+    <div class="campo">
+        <label for="marca">Marca: </label>
+        <input type="text" id="marca" placeholder="Digite a marca do produto" formControlName="marca">
+    </div>
+    <div class="campo">
+        <label for="quantidadeMinima">Quantidade Mínima: (digite um valor numérico)</label>
+        <input type="text" id="quantidadeMinima" placeholder="Digite a quantidade mínima do produto no estoque" formControlName="quantidadeMinima">
+    </div>
+    <div class="campo">
+        <label for="valorEntrada">Valor entrada: (digite um valor numérico, em R$)</label>
+        <input type="text" id="valorEntrada" placeholder="Digite o valor de entrada do produto" formControlName="valorEntrada">
+    </div>
+    <div class="campo">
+        <label for="valorSaida">Valor saída: (digite um valor numérico, em R$)</label>
+        <input type="text" id="valorSaida" placeholder="Digite o valor de saída do produto" formControlName="valorSaida">
+    </div>
+    <div class="campo">
+        <label for="observacoes">Observações: </label>
+        <input type="text" id="observacoes" placeholder="Digite observações relevantes do produto..." formControlName="observacoes">
+    </div>
+    <button 
+    type="submit"
+    class="botao"
+    >Cadastrar Produto</button>
+</form>
