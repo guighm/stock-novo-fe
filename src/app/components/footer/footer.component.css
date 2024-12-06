@@ -1,0 +1,24 @@
+.rodape {
+    background-color: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.texto {
+    display: flex;
+    gap: 10px;
+}
+
+.cop {
+    display: flex;
+}
+
+.rodape__texto {
+    font-family: var(--font-footer);
+    font-weight: 500;
+    font-size: medium;
+    color: var(--cor-1);
+}

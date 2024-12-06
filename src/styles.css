@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -12,10 +12,10 @@ body {
     background-image: url("../public/cima.png"), url("../public/baixo.png");
     background-repeat: no-repeat, no-repeat;
     background-position: top right, bottom left;
-    background-attachment: fixed, fixed; 
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
+    background-attachment: scroll, scroll; 
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-style: var(--font-style);
 }
 
 html {
@@ -27,4 +27,9 @@ html {
     --orange: #FD7401;
     --white: #FFFFFF;
     --cor-input: #F1F3F6;
+    --font-family: "Poppins", sans-serif;
+    --font-footer: "Montserrat", sans-serif;
+    --font-weight: 100;
+    --font-style: normal;
+    --yellow: #F5F76C;
 }
