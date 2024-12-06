@@ -4,8 +4,8 @@
     align-items: center;
     padding: 2rem;
     border-radius: 1rem;
-    width: 492px;
-    margin: 5rem auto 400.16px auto;
+    width: 30rem;
+    margin: 5rem auto;
 }
 
 .formulario {
@@ -22,7 +22,7 @@
 label {
     font-weight: 400;
     color: #555555;
-    font-size: 16.16px;
+    font-size: 14px;
 }
 
 input {
@@ -68,9 +68,9 @@ img {
 }
 
 h2 {
-    font-weight: 400;
+    font-weight: 600;
     color: #555555;
-    font-size: 16.16px;
+    font-size: 17px;
 }
 
 .dica {
