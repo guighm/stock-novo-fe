@@ -39,8 +39,8 @@ export class FormComponent implements OnInit {
       largura: ['', Validators.required],
       descricao: ['', Validators.required],
       categoriaID: ['', Validators.required],
-      GETIN: ['', Validators.required, Validators.minLength(13), Validators.maxLength(13)],
-      NCM: ['', Validators.required, Validators.minLength(8), Validators.maxLength(8)],
+      GETIN: ['', [Validators.required, Validators.minLength(13), Validators.maxLength(13)]],
+      NCM: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(8)]],
       marca: ['', Validators.required],
       quantidadeMinima: ['', Validators.required],
       valorEntrada: ['', Validators.required],
@@ -70,16 +70,16 @@ export class FormComponent implements OnInit {
         this.novoProduto.observacoes = this.formProduto.value.observacoes;
       }
       this.produto.cadastrarProduto(this.novoProduto).subscribe({
-        next: (response) => {
+        next: () => {
           this.router.navigate(["cadastro-efetuado"]);
-          console.log(response);
         },
         error: (err) => {
-          console.log(err);
+          if (err.status === 409) {
+            this.router.navigate(["/conflict"]);
+          }
         }
       });
     } else {
-      console.log('valor entrada:' + this.formProduto.value.valorEntrada);
       this.pegarErros();
       localStorage.setItem("erros", JSON.stringify(this.erros));
       this.router.navigate(["cadastro-negado"]);

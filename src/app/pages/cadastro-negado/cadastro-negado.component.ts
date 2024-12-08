@@ -19,7 +19,6 @@ export class CadastroNegadoComponent implements OnInit {
 
   ngOnInit(): void {
     this.erros = JSON.parse(localStorage.getItem("erros")!);
-    console.log(this.erros);
   }
 
 
