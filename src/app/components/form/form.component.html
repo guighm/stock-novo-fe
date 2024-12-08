@@ -11,15 +11,15 @@
         </div>
         <div class="campo">
             <label for="peso">Peso (em kg): <strong class="asterisco">&ast;</strong></label>
-            <input type="text" id="peso" placeholder="Peso" formControlName="peso">
+            <input type="number" id="peso" placeholder="Peso" formControlName="peso">
         </div>
         <div class="campo">
             <label for="comprimento">Comprimento (em m): <strong class="asterisco">&ast;</strong></label>
-            <input type="text" id="comprimento" placeholder="Comprimento" formControlName="comprimento">
+            <input type="number" id="comprimento" placeholder="Comprimento" formControlName="comprimento">
         </div>
         <div class="campo">
-            <label for="altura">Altura (em m): <strong class="asterisco">&ast;</strong></label>
-            <input type="text" id="altura" placeholder="Altura" formControlName="altura">
+            <label for="largura">Largura (em m): <strong class="asterisco">&ast;</strong></label>
+            <input type="number" id="largura" placeholder="Largura" formControlName="largura">
         </div>
         <div class="campo">
             <label for="descricao">Digite a descrição do produto: <strong class="asterisco">&ast;</strong></label>
@@ -27,24 +27,20 @@
         </div>
         <div class="campo">
             <label for="categorias">Categoria do produto <strong class="asterisco">&ast;</strong></label>
-            <select name="categorias" id="categorias" formControlName="categoria" class="selecao">
-                <option value="computador">Computador</option>
-                <option value="tablet">Tablet</option>
-                <option value="perifericos">Periféricos</option>
-                <option value="conectividade">Conectividade</option>
-                <option value="softwares">Softwares</option>
-                <option value="hardware">Hardware</option>
-                <option value="linha-gamer">Linha Gamer</option>
-                <option value="acessorios">Acessórios</option>
+            <select name="categorias" id="categorias" formControlName="categoriaID" class="selecao">
+                @for (categoria of categorias; track categoria.id) {
+                    <option [value]="categoria.id">{{categoria.nome}}</option>
+                }
             </select>
+            <p>Não encontrou a categoria que deseja? <a routerLink="/cadastrar-categoria">Cadastre-a!</a></p>
         </div>
         <div class="campo">
             <label for="getin">GETIN: <strong class="asterisco">&ast;</strong></label>
-            <input type="text" id="getin" placeholder="Digite o GETIN do produto" formControlName="getin">
+            <input type="text" id="getin" placeholder="Digite o GETIN do produto" formControlName="GETIN">
         </div>
         <div class="campo">
             <label for="ncm">NCM: <strong class="asterisco">&ast;</strong></label>
-            <input type="text" id="ncm" placeholder="Digite o NCM do produto" formControlName="ncm">
+            <input type="text" id="ncm" placeholder="Digite o NCM do produto" formControlName="NCM">
         </div>
         <div class="campo">
             <label for="marca">Marca: <strong class="asterisco">&ast;</strong></label>
@@ -52,15 +48,15 @@
         </div>
         <div class="campo">
             <label for="quantidadeMinima">Quantidade Mínima: (digite um valor numérico) <strong class="asterisco">&ast;</strong></label>
-            <input type="text" id="quantidadeMinima" placeholder="Digite a quantidade mínima do produto no estoque" formControlName="quantidadeMinima">
+            <input type="number" id="quantidadeMinima" placeholder="Digite a quantidade mínima do produto no estoque" formControlName="quantidadeMinima">
         </div>
         <div class="campo">
             <label for="valorEntrada">Valor entrada: (digite um valor numérico, em R$) <strong class="asterisco">&ast;</strong></label>
-            <input type="text" id="valorEntrada" placeholder="Digite o valor de entrada do produto" formControlName="valorEntrada">
+            <input type="number" id="valorEntrada" placeholder="Digite o valor de entrada do produto" formControlName="valorEntrada">
         </div>
         <div class="campo">
             <label for="valorSaida">Valor saída: (digite um valor numérico, em R$) <strong class="asterisco">&ast;</strong></label>
-            <input type="text" id="valorSaida" placeholder="Digite o valor de saída do produto" formControlName="valorSaida">
+            <input type="number" id="valorSaida" placeholder="Digite o valor de saída do produto" formControlName="valorSaida">
         </div>
         <div class="campo">
             <label for="observacoes">Observações: </label>

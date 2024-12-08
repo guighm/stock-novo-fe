@@ -1,11 +1,13 @@
-<app-container>
-    <div class="container">
-        <h2>Cadastro negado!</h2>
-        <p>Erro. Os campos a seguir precisam ser preenchidos corretamente.</p>
-        @for (erro of erros; track erro) {
-            <p><strong class="asterisco">&ast;{{erro}}</strong></p>
-        }
-        <a routerLink="/home">> Tente novamente</a>
-    </div>
-</app-container>
-<app-footer></app-footer>
+<div class="pagina">
+    <app-container>
+        <div class="container">
+            <h2>Cadastro negado!</h2>
+            <p>Erro. Os campos a seguir precisam ser preenchidos corretamente.</p>
+            @for (erro of erros; track erro) {
+                <p><strong class="asterisco">&ast; {{erro}}</strong></p>
+            }
+            <a routerLink="/cadastrar-produto">> Tente novamente</a>
+        </div>
+    </app-container>
+    <app-footer></app-footer>
+</div>
